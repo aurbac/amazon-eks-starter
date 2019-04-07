@@ -60,6 +60,6 @@ From the outputs stack, copy the following values, you will need them later.
 
 2.6\. Give your role a **Name**, type `EksServiceRole` and choose **Create Role**.
 
-2.7\. Choose your the role created, and copy the **Role ARN**, you will use it later.
+2.7\. Choose the role created, and copy the **Role ARN**, you will use it later.
 
 ![Role ARN](../images/iam-copy-arn-role.png)
