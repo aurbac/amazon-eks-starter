@@ -126,7 +126,14 @@ git clone https://github.com/brentley/ecsdemo-nodejs.git
 git clone https://github.com/brentley/ecsdemo-crystal.git
 ```
 
-[Deploy the example Microservices] https://eksworkshop.com/deploy/
+Continue here: **[Deploy the example Microservices](https://eksworkshop.com/deploy/)**
+
+## Deploy the Kubernetes Dashboard
+
+[Deploy the official Kubernetes dashboard](https://eksworkshop.com/dashboard/)
+
+**Note**: When you request the token with aws-iam-authenticator, change **eksworkshop-eksctl** with the name of your cluster: **``myEKSCluster``**
+
 
 ## Useful Links
 * [Creating an Amazon EKS Cluster](https://docs.aws.amazon.com/eks/latest/userguide/create-cluster.html)
