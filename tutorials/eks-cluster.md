@@ -72,7 +72,7 @@ https://amazon-eks.s3-us-west-2.amazonaws.com/cloudformation/2019-02-11/amazon-e
 
 ## 3. Enable worker nodes to join your cluster
 
-3.1\. Inside the Cloud9 environment, download the AWS IAM Authenticator configuration map with the following commamnd:
+3.1\. Inside the Cloud9 environment, download the AWS IAM Authenticator configuration map with the following command:
 
 ```
 curl -o aws-auth-cm.yaml https://amazon-eks.s3-us-west-2.amazonaws.com/cloudformation/2019-02-11/aws-auth-cm.yaml
@@ -90,7 +90,7 @@ kubectl apply -f aws-auth-cm.yaml
 
 ![EKS Apply configuration](../images/eks-apply-nodes.png)
 
-3.4\. Watch the status of your nodes and wait for them to reach the Ready status.
+3.4\. Watch the status of your nodes and wait for them to reach the **Ready** status.
 
 ```
 kubectl get nodes
@@ -115,7 +115,7 @@ kubectl get nodes
 
 ![EKS Desired](../images/eks-desired.png)
 
-## Deploy the example Microservices 
+## 5. Deploy the example Microservices 
 
 Before proceed, in your Cloud9 environment clone the following service repos:
 
@@ -128,12 +128,15 @@ git clone https://github.com/brentley/ecsdemo-crystal.git
 
 Continue here: **[Deploy the example Microservices](https://eksworkshop.com/deploy/)**
 
-## Deploy the Kubernetes Dashboard
+![Microservices](../images/microservices.png)
+
+## 6. Deploy the Kubernetes Dashboard
 
 [Deploy the official Kubernetes dashboard](https://eksworkshop.com/dashboard/)
 
 **Note**: When you request the token with aws-iam-authenticator, change **eksworkshop-eksctl** with the name of your cluster: **``myEKSCluster``**
 
+![Dashboard](../images/dashboard.png)
 
 ## Useful Links
 * [Creating an Amazon EKS Cluster](https://docs.aws.amazon.com/eks/latest/userguide/create-cluster.html)
