@@ -4,9 +4,9 @@
 
 1.1\. Inside the Cloud9 environment we are going to create the eks cluster, run the following command inside the **bash** terminal, replace with your corresponding values:
 
-**<Role ARN>**: With the ARN Role from **EksServiceRole**.
-**<Output-SubnetIds>**: Replace with the output value copied from Cloudformation stack **eks-vpc**.
-**<Output-SecurityGroups>**: Replace with the output value copied from Cloudformation stack **eks-vpc**.
+* **``<Role ARN>``**: With the ARN Role from **EksServiceRole**.
+* **``<Output-SubnetIds>``**: Replace with the output value copied from Cloudformation stack **eks-vpc**.
+* **``<Output-SecurityGroups>``**: Replace with the output value copied from Cloudformation stack **eks-vpc**.
 
 ```
 aws eks create-cluster --name myEKSCluster --role-arn <Role ARN> --resources-vpc-config subnetIds=<Output-SubnetIds>,securityGroupIds=<Output-SecurityGroups> --region us-east-1 --kubernetes-version 1.11
@@ -111,9 +111,22 @@ kubectl get nodes
 
 ![EKS Scaling Details](../images/eks-scaling-details.png)
 
-4.4\. After some minutes your auto scaling group will have only one instance.
+4.4\. After some minutes your auto scaling group will have only one instance for the worker node.
 
 ![EKS Desired](../images/eks-desired.png)
+
+## Deploy the example Microservices 
+
+Before proceed, in your Cloud9 environment clone the following service repos:
+
+```
+cd ~/environment
+git clone https://github.com/brentley/ecsdemo-frontend.git
+git clone https://github.com/brentley/ecsdemo-nodejs.git
+git clone https://github.com/brentley/ecsdemo-crystal.git
+```
+
+[Deploy the example Microservices] https://eksworkshop.com/deploy/
 
 ## Useful Links
 * [Creating an Amazon EKS Cluster](https://docs.aws.amazon.com/eks/latest/userguide/create-cluster.html)
