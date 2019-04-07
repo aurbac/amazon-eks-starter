@@ -1,4 +1,4 @@
-# Immersion Day Core Services
+# Amazon EKS Starter
 
 Hello, this is a self-paced workshop designed to explore Amazon EKS.
 

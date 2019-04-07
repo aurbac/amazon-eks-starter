@@ -49,14 +49,14 @@ https://amazon-eks.s3-us-west-2.amazonaws.com/cloudformation/2019-02-11/amazon-e
 
 2.4\. On the **Specify Details** page, fill out the following parameters accordingly, and choose **Next**:
 
-  * **Stack name:** `myEKSCluster-worker-nodes`
-  * **ClusterName:** `myEKSCluster`
-  * **ClusterControlPlaneSecurityGrou:** Select the security group created from the Cloudformation stack **eks-vpc**
-  * **NodeGroupName:**: `workerNodes`
-  * **NodeImageId:** `ami-02c1de421df89c58d`
-  * **KeyName:** Select your Key Pair
-  * **VpcId:** Select the VPC created from the Cloudformation stack **eks-vpc**
-  * **Subnets:** Select the three subnets created from the Cloudformation stack **eks-vpc**
+  * **``Stack name``**: `myEKSCluster-worker-nodes`
+  * **``ClusterName``**: `myEKSCluster`
+  * **``ClusterControlPlaneSecurityGroup``:** Select the security group created from the Cloudformation stack **eks-vpc**
+  * **``NodeGroupName``**: `workerNodes`
+  * **``NodeImageId``**: `ami-02c1de421df89c58d`
+  * **``KeyName``**: Select your Key Pair
+  * **``VpcId``**: Select the VPC created from the Cloudformation stack **eks-vpc**
+  * **``Subnets``**: Select the three subnets created from the Cloudformation stack **eks-vpc**
 
 ![EKS Details](../images/eks-cf-details.png)
 

@@ -20,15 +20,11 @@ https://amazon-eks.s3-us-west-2.amazonaws.com/cloudformation/2019-02-11/amazon-e
 
 1.6\. On the **Specify Details** page, fill out the parameters accordingly, and then choose **Next**.
 
-  * **Stack name**: `eks-vpc`.
-
-  * **VpcBlock**: Choose a CIDR range for your VPC. **Keep the default value** `192.168.0.0/16`.
-
-  * **Subnet01Block**: Choose a CIDR range for subnet 1. **Keep the default value** `192.168.64.0/18`.
-
-  * **Subnet02Block**: Choose a CIDR range for subnet 2. **Keep the default value** `192.168.128.0/18`.
-  
-  * **Subnet03Block**: Choose a CIDR range for subnet 3. **Keep the default value** `192.168.192.0/18`.
+  * **``Stack name``**: `eks-vpc`.
+  * **``VpcBlock``**: Choose a CIDR range for your VPC. **Keep the default value** `192.168.0.0/16`.
+  * **``Subnet01Block``**: Choose a CIDR range for subnet 1. **Keep the default value** `192.168.64.0/18`.
+  * **``Subnet02Block``**: Choose a CIDR range for subnet 2. **Keep the default value** `192.168.128.0/18`.
+  * **``Subnet03Block``**: Choose a CIDR range for subnet 3. **Keep the default value** `192.168.192.0/18`.
 
 ![Specify Details](../images/cf-details.png)
 
@@ -40,9 +36,9 @@ https://amazon-eks.s3-us-west-2.amazonaws.com/cloudformation/2019-02-11/amazon-e
 
 From the outputs stack, copy the following values, you will need them later.
 
-  * **SecurityGroups**: You need this when you create your EKS cluster; this security group is applied to the cross-account elastic network interfaces that are created in your subnets that allow the Amazon EKS control plane to communicate with your worker nodes.
-  * **VpcId**: You need this when you launch your worker node group template.
-  * **SubnetIds**: You need this when you create your EKS cluster; these are the subnets that your worker nodes are launched into.
+  * **``SecurityGroups``**: You need this when you create your EKS cluster; this security group is applied to the cross-account elastic network interfaces that are created in your subnets that allow the Amazon EKS control plane to communicate with your worker nodes.
+  * **``VpcId``**: You need this when you launch your worker node group template.
+  * **``SubnetIds``**: You need this when you create your EKS cluster; these are the subnets that your worker nodes are launched into.
 
 ![Outputs](../images/cf-outputs.png)
 
@@ -63,3 +59,7 @@ From the outputs stack, copy the following values, you will need them later.
 2.5\. For **Add tags** choose **Next: Review**.
 
 2.6\. Give your role a **Name**, type `EksServiceRole` and choose **Create Role**.
+
+2.7\. Choose your the role created, and copy the **Role ARN**, you will use it later.
+
+![Role ARN](../images/iam-copy-arn-role.png)

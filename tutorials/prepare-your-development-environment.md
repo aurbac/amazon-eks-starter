@@ -53,15 +53,15 @@
 
 ![Select Role](../images/cloud9-select-role.png)
 
-## 3. Install requirements
+## 4. Install requirements
 
-3.1\. Open the AWS Cloud9 console at https://console.aws.amazon.com/cloud9/.
+4.1\. Open the AWS Cloud9 console at https://console.aws.amazon.com/cloud9/.
 
-3.2\. In the list of environments, for the environment you want to open, inside of the card, choose **Open IDE**.
+4.2\. In the list of environments, for the environment you want to open, inside of the card, choose **Open IDE**.
 
 ![Cloud9 Open](../images/cloud9-open.png)
 
-3.3\. Inside the Cloud9 environment, in the **bash** terminal we are goint to install the **kubectl** command line for Kubernetes, execute the following lines:
+4.3\. Inside the Cloud9 environment, in the **bash** terminal we are goint to install the **kubectl** command line for Kubernetes, execute the following lines:
 
 ```
 curl -LO https://storage.googleapis.com/kubernetes-release/release/v1.14.0/bin/linux/amd64/kubectl
@@ -69,7 +69,7 @@ chmod +x ./kubectl
 sudo mv ./kubectl /usr/local/bin/kubectl
 ```
 
-3.4\. After you install **kubectl**, you can verify its version with the following command:
+4.4\. After you install **kubectl**, you can verify its version with the following command:
 
 ```
 kubectl version
@@ -77,7 +77,7 @@ kubectl version
 
 ![Kubectl Version](../images/kubectl-version.png)
 
-3.5\. Now install the **aws-iam-authenticator** for Amazon EKS, execute the following lines:
+4.5\. Now install the **aws-iam-authenticator** for Amazon EKS, execute the following lines:
 
 ```
 curl -o aws-iam-authenticator https://amazon-eks.s3-us-west-2.amazonaws.com/1.12.7/2019-03-27/bin/linux/amd64/aws-iam-authenticator
@@ -85,7 +85,7 @@ chmod +x ./aws-iam-authenticator
 sudo mv ./aws-iam-authenticator /usr/local/bin/aws-iam-authenticator
 ```
 
-3.6\. Test that the **aws-iam-authenticator** binary works with the following command:
+4.6\. Test that the **aws-iam-authenticator** binary works with the following command:
 
 ```
 aws-iam-authenticator help
@@ -93,23 +93,23 @@ aws-iam-authenticator help
 
 ![aws-iam-authenticator](../images/aws-iam-authenticator-help.png)
 
-## 4. Update IAM settings for your Cloud9 Environment
+## 5. Update IAM settings for your Cloud9 Environment
 
-4.1\. Inside the Cloud9 environment, click on AWS Cloud9 and **Preferences**.
+5.1\. Inside the Cloud9 environment, click on **AWS Cloud9** and **Preferences**.
 
 ![Cloud9 Preferences](../images/cloud9-preferences.png)
 
-4.2\. Select **AWS SETTINGS** and turn off **AWS managed temporary credentials**.
+5.2\. Select **AWS SETTINGS** and turn off **AWS managed temporary credentials**.
 
 ![AWS SETTINGS](../images/cloud-aws-settings.png)
 
-4.3\. Ensure temporary credentials aren’t already in place, remove existing credentiasl with the following command:
+5.3\. Ensure temporary credentials aren’t already in place, remove existing credentiasl with the following command:
 
 ```
 rm -vf ${HOME}/.aws/credentials
 ```
 
-4.4\. Validate the IAM role, it should contain the role name and instance Id, run the following command:
+5.4\. Validate the IAM role, it should contain the role name and instance Id, run the following command:
 
 ```
 aws sts get-caller-identity
