@@ -72,7 +72,7 @@ sudo mv ./kubectl /usr/local/bin/kubectl
 4.4\. After you install **kubectl**, you can verify its version with the following command:
 
 ```
-kubectl version
+kubectl version --short --client
 ```
 
 ![Kubectl Version](../images/kubectl-version.png)
